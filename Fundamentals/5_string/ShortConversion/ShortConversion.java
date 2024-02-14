@@ -7,7 +7,7 @@ public class ShortConversion{
 		System.out.println("Type a short Value ->");
 		String shortvalue=in.nextLine();
 
-		short newvalue=Short.parseShort(shortvalue);
+		short newvalue=Short.valueOf(shortvalue);
 
 		System.out.println(newvalue);
 	}
