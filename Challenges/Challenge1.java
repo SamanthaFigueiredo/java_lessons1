@@ -2,6 +2,12 @@ import java.util.Scanner;
 
 public class Challenge1{
 	public static void main (String[]args){
+		Prompt();
+
+	}
+
+
+	public static void Prompt(){
 		Scanner in = new Scanner(System.in);
 
 		System.out.println("What is your name: ");
@@ -23,6 +29,5 @@ public class Challenge1{
 		System.out.println("Surname: "+surname);
 		System.out.println("Date of birth: "+date_of_birth);
 		System.out.println("Distance from store: "+distance_from_store);
-
 	}
 }
