@@ -1,7 +1,10 @@
 public class Printer{
 	
 
-	public static boolean print(){
+	public static void print(String NameSurname){
+
+		System.out.print("Hello "+NameSurname);
+
 
 	}
 }
