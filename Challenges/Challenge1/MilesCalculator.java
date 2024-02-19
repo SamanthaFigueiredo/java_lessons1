@@ -1,5 +1,5 @@
 public class MilesCalculator{
-	public static void milecalc(){
+	public static double milecalc(){
 		
 	}
 }

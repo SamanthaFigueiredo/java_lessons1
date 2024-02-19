@@ -1,5 +1,7 @@
 public class DateValidator{
-	public static void datevalid(){
+	public static boolean datevalid(){
+
+		
 		
 	}
 }

@@ -1,5 +1,5 @@
 public class AgeValidator{
-	public static void Agecalc(){
+	public static double Agecalc(){
 		
 	}
 }

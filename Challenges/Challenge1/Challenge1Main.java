@@ -1,11 +1,12 @@
 public class Challenge1Main{
 	public static void main (String[]args){
 
-		Prompter prompter=new Prompter();
+		System.out.println("What is your name: ");
+			String name=Prompter1.prompt();
+			
 
-		prompter.prompt();
-
-	}
+		
+   		}
 
 
 
