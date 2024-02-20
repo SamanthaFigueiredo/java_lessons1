@@ -3,6 +3,8 @@ public class MilesCalculator{
 		
 		double miles = Double.parseDouble(distance_from_store) /1.6;
 
-		return miles;
+		double milesmeter= miles*1609.344;
+
+		return milesmeter;
 	}
 }

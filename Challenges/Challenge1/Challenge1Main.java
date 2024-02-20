@@ -16,6 +16,8 @@ public class Challenge1Main{
 			//DateValidator dv = new DateValidator();
 			//dv.datevalid(date_of_birth);
 
+			NumberValidator numv=new NumberValidator();
+			numv.numvalid(distance_from_store);
 
 			String NameSurname=name + " "+surname;
 			Printer pr=new Printer();
