@@ -13,8 +13,8 @@ public class Challenge1Main{
 			System.out.println("How far is your favourite store from your home in km? ");
 			String distance_from_store=Prompter1.prompt();
 			
-			//DateValidator dv = new DateValidator();
-			//dv.datevalid(date_of_birth);
+			DateValidator dv = new DateValidator();
+			dv.datevalid(date_of_birth);
 
 			NumberValidator numv=new NumberValidator();
 			numv.numvalid(distance_from_store);
