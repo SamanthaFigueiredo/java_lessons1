@@ -19,8 +19,20 @@ public class Challenge1Main{
 
 			String NameSurname=name + " "+surname;
 			Printer pr=new Printer();
-			pr.print(NameSurname);
+			//pr.print(NameSurname);
 
+			
+			AgeValidator ageval = new AgeValidator();
+			ageval.Agecalc(date_of_birth);
+
+			int age = AgeValidator.Agecalc(date_of_birth);
+
+			MilesCalculator milecalc=new MilesCalculator();
+			milecalc.milecalcs(distance_from_store);
+
+			double distance = MilesCalculator.milecalcs(distance_from_store);
+			
+			pr.print(NameSurname,String.valueOf(age), String.valueOf(distance));
 
 		
    		}
