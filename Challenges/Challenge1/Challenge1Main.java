@@ -1,28 +1,28 @@
 public class Challenge1Main{
 	public static void main (String[]args){
+			String name=Prompter1.prompt("What is your name: ");
+			String surname=Prompter1.prompt("What is your surname: ");
+			String date_of_birth=null;
+        	boolean validDate = false;
 
-			System.out.println("What is your name: ");
-			String name=Prompter1.prompt();
+        	while (!validDate) {
+                date_of_birth=Prompter1.prompt("Enter your date of birth: (DD/MM/YYYY) ");
+                DateValidator dv = new DateValidator();
+                validDate = dv.datevalid(date_of_birth);
+       		}
 
-			System.out.println("What is your surname: ");
-			String surname=Prompter1.prompt();
+       	 	String distance_from_store=null;
+        	boolean validnum=false;
 
-			System.out.println("Enter your date of birth: (DD/MM/YYYY) ");
-			String date_of_birth=Prompter1.prompt();
-
-			System.out.println("How far is your favourite store from your home in km? ");
-			String distance_from_store=Prompter1.prompt();
-			
-			DateValidator dv = new DateValidator();
-			dv.datevalid(date_of_birth);
-
-			NumberValidator numv=new NumberValidator();
-			numv.numvalid(distance_from_store);
+        	while (!validnum){
+           
+                distance_from_store=Prompter1.prompt("How far is your favourite store from your home in km? ");
+                NumberValidator numv=new NumberValidator();
+                validnum=numv.numvalid(distance_from_store);
+        	}
 
 			String NameSurname=name + " "+surname;
 			Printer pr=new Printer();
-			//pr.print(NameSurname);
-
 			
 			AgeValidator ageval = new AgeValidator();
 			ageval.Agecalc(date_of_birth);
