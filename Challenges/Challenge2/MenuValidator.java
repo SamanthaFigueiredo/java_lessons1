@@ -21,7 +21,7 @@ public class MenuValidator {
                     System.out.println("Modulus");
                     break;
                 default:
-                    System.out.println("Invalid Menu. Please choose again.");
+                    System.out.println("Invalid Menu Option. Please choose again.");
                     return false; // Return false for invalid menu options
             }
             return true; // Return true for valid menu options
