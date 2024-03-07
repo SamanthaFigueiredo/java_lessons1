@@ -5,7 +5,7 @@ public class NumberValidator{
 			double newop2=Double.parseDouble(op2);
 
 		}catch(NumberFormatException nfe){
-			System.out.println("Invalid Operands" );
+			System.out.println("----Invalid Operands----" );
 			return false;
 		}
 		return true;
