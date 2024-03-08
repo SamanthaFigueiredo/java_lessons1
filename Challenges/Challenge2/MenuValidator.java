@@ -26,10 +26,12 @@ public class MenuValidator {
                     return false;
                     }
                 else{
-                    System.out.println("Addition");
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("\n ----- Addition -----\n");
                     Addition addition=new Addition();
                     addition.add(op1,op2);
-                    System.out.println(op1 +"+"+op2+"="+addition.add(op1,op2));
+                    System.out.println(op1 +operator+op2+"="+addition.add(op1,op2));
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     }
 
                 break;
@@ -41,10 +43,12 @@ public class MenuValidator {
                     return false;
                     }
                 else{
-                    System.out.println("Subtraction");
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("\n ----- Subtraction -----\n");
                     Subtraction subtraction=new Subtraction();
                     subtraction.subtract(op1,op2);
-                    System.out.println(op1 +"+"+op2+"="+subtraction.subtract(op1,op2));
+                    System.out.println(op1 +operator+op2+"="+subtraction.subtract(op1,op2));
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     }
 
                 break;
@@ -56,10 +60,12 @@ public class MenuValidator {
                     return false;
                     }
                 else{
-                    System.out.println("Multiplication");
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("\n ----- Multiplication -----\n");
                     Multiplication multiplication=new Multiplication();
                     multiplication.multiply(op1,op2);
-                    System.out.println(op1 +"+"+op2+"="+multiplication.multiply(op1,op2));
+                    System.out.println(op1 +operator+op2+"="+multiplication.multiply(op1,op2));
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     }
 
                 break;
@@ -71,10 +77,12 @@ public class MenuValidator {
                     return false;
                     }
                 else{
-                    System.out.println("Division");
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("\n ----- Division -----\n");
                     Division divide=new Division();
                     divide.divide(op1,op2);
-                    System.out.println(op1 +"+"+op2+"="+divide.divide(op1,op2));
+                    System.out.println(op1 +operator+op2+"="+divide.divide(op1,op2));
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     }
 
                 break;
@@ -86,10 +94,12 @@ public class MenuValidator {
                     return false;
                     }
                 else{
-                    System.out.println("Modulus");
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("\n ----- Modulus -----\n");
                     Modulus mod=new Modulus();
                     mod.modulus(op1,op2);
-                    System.out.println(op1 +"+"+op2+"="+mod.modulus(op1,op2));
+                    System.out.println(op1 +operator+op2+"="+mod.modulus(op1,op2));
+                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     }
 
                 break;

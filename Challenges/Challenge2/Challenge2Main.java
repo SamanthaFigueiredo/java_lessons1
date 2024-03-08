@@ -35,8 +35,10 @@ public class Challenge2Main{
             }
             
             String operator=Prompter.prompt("Enter the operator ( + - / * % ) -> ");
-            mv.menuval(menu,operator,op1,op2);            
-         
+            boolean validop=mv.menuval(menu,operator,op1,op2);            
+         	if(!validop){
+            	continue;
+            }
             continuecalc = Prompter.prompt("Continue Calculations -> (Y or N)");
 
             if(continuecalc.equals("N")){
