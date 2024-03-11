@@ -35,92 +35,80 @@ public class Conditionals5main{
 
 
 	
-		String ClassTeacher=null;
-		String PETeacher=null;
-		String Block=null;
+		 String ClassTeacher=null;
+        String PETeacher=null;
 
-		switch(grade){
-		case "1":
-			Block="Block B";
-			ClassTeacher="Mrs Jones";
-			PETeacher="Mr Roberts";
-			break;
+        switch(grade){
+            case "1":
+                ClassTeacher="Mrs Jones";
+                PETeacher="Mr Roberts";
+                break;
 
-		case "2":
-			Block="Block B";
-			ClassTeacher="Mr Swan";
-			PETeacher="Mr Roberts";
-			break;
+            case "2":
+                ClassTeacher="Mr Swan";
+                PETeacher="Mr Roberts";
+                break;
 
-		case "3":
-			Block="Block B";
-			ClassTeacher="Mrs Jamie";
-			PETeacher="Mr Roberts";
-			break;
+            case "3":
+                ClassTeacher="Mrs Jamie";
+                PETeacher="Mr Roberts";
+                break;
 
-		case "4":
-			Block="Block B";
-			ClassTeacher="Mrs Jackson";
-			PETeacher="Mr Stevens";
-			break;
+            case "4":
+                ClassTeacher="Mrs Jackson";
+                PETeacher="Mr Stevens";
+                break;
 
-		case "5":
-			Block="Block B";
-			ClassTeacher="Mrs Lane";
-			PETeacher="Mr Stevens";
-			break;
+            case "5":
+                ClassTeacher="Mrs Lane";
+                PETeacher="Mr Stevens";
+                break;
 
-		case "6":
-			Block="Block B";
-			ClassTeacher="Mrs Brett";
-			PETeacher="Mr Stevens";
-			break;
+            case "6":
+                ClassTeacher="Mrs Brett";
+                PETeacher="Mr Stevens";
+                break;
 
-		case "7":
-			Block="Block B";
-			ClassTeacher="Mrs Shane";
-			PETeacher="Mr Stevens";
-			break;
+            case "7":
+                ClassTeacher="Mrs Shane";
+                PETeacher="Mr Stevens";
+                break;
 
-		case "8":
-			Block="Block A";
-			ClassTeacher="Mr Zee";
-			PETeacher="Mrs Rodgers";
-			break;
+            case "8":
+                ClassTeacher="Mr Zee";
+                PETeacher="Mrs Rodgers";
+                break;
 
-		case "9":
-			Block="Block A";
-			ClassTeacher="Mr Nell";
-			PETeacher="Mrs Rodgers";
-			break;
+            case "9":
+                ClassTeacher="Mr Nell";
+                PETeacher="Mrs Rodgers";
+                break;
 
-		case "10":
-			Block="Block A";
-			ClassTeacher="Mrs Baretta";
-			PETeacher="Mr Lyle";
-			break;
+            case "10":
+                ClassTeacher="Mrs Baretta";
+                PETeacher="Mr Lyle";
+                break;
 
-		case "11":
-			Block="Block A";
-			ClassTeacher="Mr Cane";
-			PETeacher="Mr Lyle";
-			break;
+            case "11":
+                ClassTeacher="Mr Cane";
+                PETeacher="Mr Lyle";
+                break;
 
-		case "12":
-			Block="Block A";
-			ClassTeacher="Mr Lamone";
-			PETeacher="Mr Lyle";
-			break;
+            case "12":
+                ClassTeacher="Mr Lamone";
+                PETeacher="Mr Lyle";
+                break;
 
-		default:
-			System.out.println("Invalid grade!!!");
-		}
+            default:
+                System.out.println("Invalid grade!!!");
+        }
+
 
 		String NameSurname=name + " "+surname;
 
 		print pr=new print();
 
-		pr.printer(NameSurname, grade,ClassTeacher,PETeacher,Block);
+		pr.printer(NameSurname, grade,ClassTeacher,PETeacher);
 		
 	}
 }
