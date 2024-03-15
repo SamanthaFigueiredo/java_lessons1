@@ -4,10 +4,10 @@ public class Printer{
 public static void print(String NameSurname, String age, String distance ){//paramaters
 
 
-System.out.println("-------------------------\n");
+	System.out.println("\n---------------------------------\n");
 		System.out.print("Hello "+NameSurname);  //Username and surname
 
-		System.out.println("\nYou are "+age+" years old "); //Calculated age ( AgeValidator)
+		System.out.println("\nYou are "+age+" years old. "); //Calculated age ( AgeValidator)
 
 		int agesec= Integer.parseInt(age)*86400; //Age in seconds
 
@@ -25,7 +25,7 @@ System.out.println("-------------------------\n");
 
 
 
-	System.out.println("\n-------------------------");	
+	System.out.println("\n---------------------------------");	
 
 
 

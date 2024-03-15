@@ -1,11 +1,13 @@
 public class MenuValidator {
-
+    //checks if user has entered correct menu selection between 1-5
    public static boolean menunum(String menu){
+
+        //false if user skipped or did not select an option
         if(menu.isEmpty()){
             System.out.println("Operation selection is blank or invalid. Please re-enter");
             return false;
         }
-
+        //false if not in number range
         if (!menu.matches("[1-5]")) {
             System.out.println("Invalid menu option. Please choose a number between 1 and 5.");
             return false;
@@ -15,95 +17,98 @@ public class MenuValidator {
             return true;
     }
 
+
+    //method checks if operator entered is same as chosen operation and calculates
     public static boolean menuval(String menu,String operator,String op1, String op2) {
 
-
+        //checks menu selection (1-5)
         switch (menu) {
+                //Addition
             case "1":
-                    
+                    //checks addition sign
                 if(!operator.equals("+")){
+
                     System.out.println("---Invalid Operator for chosen Operation---");
                     return false;
+
                     }
                 else{
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    System.out.println("\n ----- Addition -----\n");
-                    Addition addition=new Addition();
-                    addition.add(op1,op2);
-                    System.out.println(op1 +operator+op2+"="+addition.add(op1,op2));
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    double result= Addition.add(op1,op2);
+                    Printer.print(op1, operator, op2, String.valueOf(result));
+
                     }
-
+                //ends case statement
                 break;
-
+                //Subtraction       
             case "2":
-                
+                    //checks subtraction sign
                 if(!operator.equals("-")){
+
                     System.out.println("---Invalid Operator for chosen Operation---");
                     return false;
+
                     }
                 else{
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    System.out.println("\n ----- Subtraction -----\n");
-                    Subtraction subtraction=new Subtraction();
-                    subtraction.subtract(op1,op2);
-                    System.out.println(op1 +operator+op2+"="+subtraction.subtract(op1,op2));
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    double result=Subtraction.subtract(op1,op2);
+                    Printer.print(op1, operator, op2, String.valueOf(result));
+
                     }
-
+                //ends case statement
                 break;
-
+                //Multiplication
             case "3":
-                
+                    //checks multiplication sign
                 if(!operator.equals("*")){
+
                     System.out.println("---Invalid Operator for chosen Operation---");
                     return false;
+
                     }
                 else{
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    System.out.println("\n ----- Multiplication -----\n");
-                    Multiplication multiplication=new Multiplication();
-                    multiplication.multiply(op1,op2);
-                    System.out.println(op1 +operator+op2+"="+multiplication.multiply(op1,op2));
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    double result=Multiplication.multiply(op1,op2);
+                    Printer.print(op1, operator, op2, String.valueOf(result));
+
                     }
-
+                //ends case statement 
                 break;
-
+            //Division    
             case "4":
-                
+                    //checks division sign
                 if(!operator.equals("/")){
+
                     System.out.println("---Invalid Operator for chosen Operation---");
                     return false;
+
                     }
                 else{
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    System.out.println("\n ----- Division -----\n");
-                    Division divide=new Division();
-                    divide.divide(op1,op2);
-                    System.out.println(op1 +operator+op2+"="+divide.divide(op1,op2));
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    double result= Division.divide(op1,op2);
+                    Printer.print(op1, operator, op2, String.valueOf(result));
+
                     }
-
+                //ends case statement
                 break;
-
+            //Modulus        
             case "5":
-                
+                    //checks modulus statement
                 if(!operator.equals("%")){
+
                     System.out.println("---Invalid Operator for chosen Operation---");
                     return false;
+
                     }
                 else{
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    System.out.println("\n ----- Modulus -----\n");
-                    Modulus mod=new Modulus();
-                    mod.modulus(op1,op2);
-                    System.out.println(op1 +operator+op2+"="+mod.modulus(op1,op2));
-                    System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    double result=Modulus.modulus(op1,op2);
+                    Printer.print(op1, operator, op2, String.valueOf(result));
+
                     }
-
+                //ends case statment
                 break;
-
+                //output message for if none of above options are correct
             default:
 
                     System.out.println("Invalid Menu Option. Please choose again.");
