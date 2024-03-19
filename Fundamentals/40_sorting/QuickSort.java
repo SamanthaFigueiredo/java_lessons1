@@ -36,7 +36,7 @@ public static void quick(int arr[], int start, int end) /* a[] = array to be sor
 
 		int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
 
-		System.out.println("Array Before Bubble Sort\n");  
+		System.out.println("Array Before Quick Sort\n");  
 
             for(int i=0; i < arr.length; i++){  
                 System.out.print(arr[i] + " ");  
@@ -44,7 +44,7 @@ public static void quick(int arr[], int start, int end) /* a[] = array to be sor
 
         quick(arr, 0, arr.length-1);
 
-        System.out.println("\nArray After Bubble Sort\n");  
+        System.out.println("\nArray After Quick Sort\n");  
 
             for(int i=0; i < arr.length; i++){  
                 System.out.print(arr[i] + " ");  
