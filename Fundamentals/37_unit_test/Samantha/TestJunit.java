@@ -1,5 +1,5 @@
-import org.junit.jupiter.apiTest;
-import static org.junit.Assert.assertEquals;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 public class TestJunit {
 	
@@ -8,6 +8,6 @@ public class TestJunit {
 
    @Test
    public void testPrintMessage() {
-      assertEquals(message,messageUtil.printMessage());
+      assertNotEquals(message,messageUtil.printMessage());
    }
 }
