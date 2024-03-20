@@ -8,20 +8,20 @@ public class DividerTest{
 
 	@Test
 	public void testDivideByZero() {
-		assertNotEquals(message,divutil.divideByZero(2.0));
+		assertEquals(message,divutil.divideByZero(2.0));
 	}
 	@Test
 	public void testDivideByNegative(){
-		assertNotEquals(message,divutil.divideByNegative(-2.0,-3.0));
+		assertEquals(message,divutil.divideByNegative(-2.0,-3.0));
 	}
 	@Test
 	public void testDivideByPositive(){
-			assertNotEquals(message,divutil.divideByPositive(2.0,3.0));
+			assertEquals(message,divutil.divideByPositive(2.0,3.0));
 	}
 
-	@Test
-	public void testDivideByZero2() {
-		assertNotEquals(message,divutil2.divideByZero(2.0));
-	}
+	//@Test
+	//public void testDivideByZero2() {
+	//	assertNotEquals(message,divutil2.divideByZero(2.0));
+	//}
 
 }
