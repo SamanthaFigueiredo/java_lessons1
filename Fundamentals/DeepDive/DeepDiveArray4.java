@@ -24,7 +24,7 @@ public class DeepDiveArray4{
 
 	public static void populatearray(int[]arr){
 		//populates each element in array
-		for(int i=1; i<arr.length;i++){
+		for(int i=0; i<arr.length;i++){
 
 			arr[i]=i;
 			
@@ -33,7 +33,7 @@ public class DeepDiveArray4{
 
 	public static void printarray(int[]arr){
 		//prints each element of array
-		for(int i=1;i<arr.length;i++){
+		for(int i=0;i<arr.length;i++){
 
 			System.out.print(arr[i] + " ");
 
@@ -41,7 +41,7 @@ public class DeepDiveArray4{
 	}
 	public static void incrementarray(int[]arr){
 		//Increments each element by 1 in array
-		for(int i=1; i<arr.length;i++){
+		for(int i=0; i<arr.length;i++){
 			arr[i]=i+1;
 			
 		}

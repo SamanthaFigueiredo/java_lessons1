@@ -31,12 +31,8 @@ public class DeepDiveArray2{
 	public static void divisiblearray(int []arr){
 		for(int n=0;n<arr.length;n++){
 			//sorts through numbers divisible by 11, and prints
-			if(arr[n]%2==0){
-				if(arr[n]%11==0){
-					System.out.print(arr[n]+" ");
-				}
-				
-			}
+			if(arr[n]%2==0 && arr[n]%11==0){
+			System.out.print(arr[n]+" ");		}
 		}
 	}
 }
@@ -57,3 +53,15 @@ public class DeepDiveArray2{
 		//		System.out.print(nums+" ");
 		//	}
 		//}
+
+
+//public static void divisiblearray(int []arr){
+//		for(int n=0;n<arr.length;n++){
+//			//sorts through numbers divisible by 11, and prints
+			//if(arr[n]%2==0){
+			//	if(arr[n]%11==0){
+			//		System.out.print(arr[n]+" ");
+			//	}
+//			
+//		}
+//	}

@@ -21,7 +21,7 @@ public class DeepDiveArray6{
 
 	public static void populatearray(int[]arr){
 		//populates each element in array
-		int i=1;//array element initialisation
+		int i=0;//array element initialisation
 		while(i<arr.length){
 
 			arr[i]=i;
@@ -32,7 +32,7 @@ public class DeepDiveArray6{
 
 	public static void printarray(int[]arr){
 		//prints each element of array
-		int iprint=1;//array element initialisation
+		int iprint=0;//array element initialisation
 		while(iprint<arr.length){
 
 			System.out.print(arr[iprint] + " ");
@@ -43,7 +43,7 @@ public class DeepDiveArray6{
 
 	public static void divisiblearray(int[]arr){
 		//prints even and divisible by 11 numbers in array
-		int i2=1;//array element initialisation
+		int i2=0;//array element initialisation
 		while(i2<arr.length){
 
 			//sorts through numbers divisible by 2, and prints
@@ -65,3 +65,17 @@ public class DeepDiveArray6{
 
 
 }
+
+//Enhanced for loop alternative
+//prints entire array
+		//for(int nums:arr ){
+		//	System.out.print(nums+" ");
+		//}
+
+//public static void populatearray(int[]arr){
+//		Random random = new Random();
+//		int i=0;
+//		 while ( i < arr.length) {
+            // Generates random numbers between 0 and 99
+  //          	arr[i] = random.nextInt(100); 
+    //        } i++

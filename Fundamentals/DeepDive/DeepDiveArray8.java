@@ -43,10 +43,10 @@ public class DeepDiveArray8{
 
 			for(int j=0;j<arr[i].length;j++){
 				//sorts through numbers divisible by 11, and prints
-				if(arr[i][j]%2==0){
-					if(arr[i][j]%11==0){
+				if(arr[i][j]%2==0 && arr[i][j]%11==0 ){
+					
 						System.out.print(arr[i][j]+" ");
-					}
+					
 					
 				}
 				
@@ -55,3 +55,32 @@ public class DeepDiveArray8{
 		}
 	}
 }
+
+//public static void printarray(int[][] arr) {
+    // prints entire multi-dimensional array
+  //  for (int[] row : arr) {
+    //    for (int element : row) {
+      //      System.out.print(element + " \t");
+        //}
+        //System.out.println("\n");
+    //}
+//}
+
+//public static void divisiblearray(int [][]arr){
+
+		//prints even numbers and divisibles of 11 in both outer and inner array
+//		for(int i=0;i<arr.length;i++){
+
+//			for(int j=0;j<arr[i].length;j++){
+				//sorts through numbers divisible by 11, and prints
+//				if(arr[i][j]%2==0){
+//					if(arr[i][j]%11==0){
+//						System.out.print(arr[i][j]+" ");
+//					}
+//					
+//				}
+//				
+//			}
+//			System.out.println("\n");
+//		}
+//	}

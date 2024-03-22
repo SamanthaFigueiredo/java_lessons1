@@ -23,16 +23,16 @@ public class DeepDiveArray11 {
     }
     public static void populatearray(int[][]arr){
     	// Populate the multi-dimensional array
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 1; j < arr[i].length; j++) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = i + j;
             }
         }
     }
     public static void printarray(int[][]arr){
     	 // Print the entire multi-dimensional array starting from index 1
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 1; j < arr[i].length; j++) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " \t");
             }
             System.out.println("\n"); // Move to the next line after each row
@@ -46,10 +46,10 @@ public class DeepDiveArray11 {
 
             for(int j=0;j<arr[i].length;j++){
                 //sorts through numbers divisible by 11, and prints
-                if(arr[i][j]%2!=0){
-                    if(arr[i][j]%8==0){
+                if(arr[i][j]%2!=0 && arr[i][j]%8==0){
+                    
                         System.out.print(arr[i][j]+" ");
-                    }
+                    
                     
                 }
                 
@@ -57,5 +57,33 @@ public class DeepDiveArray11 {
            
         }
     }
-
 }
+
+
+//public static void populatearray(int[][] arr) {
+ //   Random random = new Random();
+   // for (int[] row : arr) {
+     //   for (int i = 0; i < row.length; i++) {
+            // Generates random numbers between 0 and 99
+       //     row[i] = random.nextInt(100);
+        //}
+    //}
+//}
+
+//public static void divisiblearray(int [][]arr){
+
+        //prints odd numbers and divisibles of 8 in both outer and inner array
+//        for(int i=0;i<arr.length;i++){
+
+//            for(int j=0;j<arr[i].length;j++){
+                //sorts through numbers divisible by 11, and prints
+  //              if(arr[i][j]%2!=0){
+    //                if(arr[i][j]%8==0){
+      //                  System.out.print(arr[i][j]+" ");
+        //            }
+                    
+          //      }
+                
+            //}
+           
+        //}
