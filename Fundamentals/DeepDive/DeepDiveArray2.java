@@ -37,23 +37,11 @@ public class DeepDiveArray2{
 	}
 }
 
-//prints even numbers in array
-		//for(int nums:arr){
-			//sorts through numbers divisible by 2(even numbers), and prints
-		//	if(nums%2==0){
-		//		System.out.print(nums+" ");
-		//	}
+//Enhanced for loop alternative
+//prints entire array
+		//for(int nums:arr ){
+		//	System.out.print(nums+" ");
 		//}
-
-//prints numbers divisible by 11 in array
-		//for(int nums:arr){
-			//sorts through numbers divisible by 11, and prints
-		//	if(nums%11==0){
-
-		//		System.out.print(nums+" ");
-		//	}
-		//}
-
 
 //public static void divisiblearray(int []arr){
 //		for(int n=0;n<arr.length;n++){

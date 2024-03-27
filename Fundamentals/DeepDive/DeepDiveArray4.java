@@ -50,6 +50,15 @@ public class DeepDiveArray4{
 }
 
 //Other alternative
+
+
+//public static void populatearray(int[]arr){
+//		Random random = new Random();
+//		 for (int i = 0; i < arr.length; i++) {
+            // Generates random numbers between 0 and 99
+  //          	arr[i] = random.nextInt(100); 
+    //        }
+        
 //prints array
 //for(int array:arr){
 	//System.out.print(array + " ");

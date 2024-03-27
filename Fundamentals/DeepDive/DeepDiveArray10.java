@@ -53,3 +53,16 @@ public class DeepDiveArray10 {
 	}
 
 }
+
+//public static void populatearray(int[][] arr) {
+ //   Random random = new Random();
+   // for (int[] row : arr) {
+     //   for (int i = 0; i < row.length; i++) {
+            // Generates random numbers between 0 and 99
+       //     row[i] = random.nextInt(100);
+        //}
+    //}
+//}
+
+
+

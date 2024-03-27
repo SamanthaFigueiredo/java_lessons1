@@ -54,9 +54,9 @@ public class DeepDiveArray6{
 			switch(div2){
 			case 0:
 				switch(div11){
-				case 0:
-				System.out.print(arr[i2]+" ");	
-				break;	
+					case 0:
+					System.out.print(arr[i2]+" ");	
+					break;	
 				}
 			}
 			i2++;

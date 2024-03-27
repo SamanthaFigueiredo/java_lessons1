@@ -16,11 +16,6 @@ public class DeepDiveArray3{
 
 		//prints even numbers and divisible by 11 in array
 		divisiblearray(arr);
-		
-
-		
-
-
 
 	}
 
@@ -50,13 +45,21 @@ public class DeepDiveArray3{
 			switch(div2){
 				case 0:
 				switch(div11){
-				case 0:
-				System.out.print(arr[n2]+" ");	
-				break;	
+					case 0:
+					System.out.print(arr[n2]+" ");	
+					break;	
 				}
 			}
 			n2++;
 		}
 	}
 }
+
+//Enhanced for loop alternative
+//prints entire array
+		//for(int nums:arr ){
+		//	System.out.print(nums+" ");
+		//}
+
+
 

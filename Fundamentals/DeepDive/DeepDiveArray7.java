@@ -48,3 +48,13 @@ public class DeepDiveArray7{
 	}
 	
 }
+
+//public static void printarray(int[][] arr) {
+    // prints entire multi-dimensional array
+  //  for (int[] row : arr) {
+    //    for (int element : row) {
+      //      System.out.print(element + " \t");
+        //}
+        //System.out.println("\n");
+    //}
+//}

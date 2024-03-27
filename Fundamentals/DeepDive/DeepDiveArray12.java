@@ -61,9 +61,9 @@ public class DeepDiveArray12 {
                 break;    
                 default:
                     switch(div11){
-                    case 0:
-                    System.out.print(arr[i11][j11]+" \t");
-                    break;
+                        case 0:
+                        System.out.print(arr[i11][j11]+" \t");
+                        break;
                     }
                 
                 }

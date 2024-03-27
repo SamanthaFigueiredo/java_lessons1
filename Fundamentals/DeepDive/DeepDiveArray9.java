@@ -50,9 +50,9 @@ public class DeepDiveArray9{
 				switch(div2){
 				case 0:
 					switch(div11){
-					case 0:
-					System.out.print(arr[i11][j11]+" ");
-					break;
+						case 0:
+						System.out.print(arr[i11][j11]+" ");
+						break;
 					}
 				
 				}
@@ -64,3 +64,4 @@ public class DeepDiveArray9{
 		}
 	}
 }
+
