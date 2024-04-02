@@ -68,7 +68,7 @@ public class ArrayPopulation2 {
         System.out.print("[");
     
         for (int i =0;i < arrayToPrint.length;i++) {
-            arrayToPrint[arrayToPrint.length-1]=-1;
+            arrayToPrint[arrayToPrint.length-1]=-1; //assigns value -1 to last value
             System.out.print(arrayToPrint[i]);
             if(i != arrayToPrint.length-1){
             	System.out.print(",");

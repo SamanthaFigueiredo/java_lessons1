@@ -22,6 +22,20 @@ public class ArrayChallenge362{
 		System.out.println("\nPrime Numbers\n");
 		populateprime(prime);
 		printarr(prime);
+
+		for (int i = 0; i < even.length; i++) {
+            twoDarray[0][i] = even[i];
+            twoDarray[1][i] = odd[i];
+            twoDarray[2][i] = prime[i];
+        }
+
+        System.out.println("\nCombined 2D Array\n");
+        for(int[] row : twoDarray){
+            for(int num : row){
+                System.out.print(num + "\t");
+            }
+            System.out.println(); // add newline after each row
+        }
 	}
 
 	//even population method that inserts even numbers in array
@@ -78,6 +92,9 @@ public class ArrayChallenge362{
    			System.out.print(arr[i] + "\t ");
    		}
     }
+
+
+    
  
 }
 
