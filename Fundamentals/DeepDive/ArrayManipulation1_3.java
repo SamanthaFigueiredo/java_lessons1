@@ -1,3 +1,4 @@
+import java.util.Arrays; //Array import for clearing
 public class ArrayManipulation1_3 {
     public static void main(String[]args){
 
@@ -10,11 +11,21 @@ public class ArrayManipulation1_3 {
         //defined new array
         int[] dest_arr = new int[array.length];
        
-        //method to sort new array
-        newsort(array,dest_arr);
+        //Alternative
+        //Arrays.sort(array);
+
+        //method to sort new array(ascending)
+        newsortasc(array,dest_arr);
 
         //print new array
-        printArray("array after swapping ",dest_arr);
+        printArray("array after swapping (Ascending) ",dest_arr);
+
+        //method to sort new array(descending)
+        newsortdesc(array,dest_arr);
+
+        printArray("array after swapping (Descending) ",dest_arr);
+
+
 
     }
     
@@ -34,7 +45,7 @@ public class ArrayManipulation1_3 {
     }
 
     //method that assigns and sorts new array (ascending)
-    public static void newsort(int[]array,int[]dest_arr){
+    public static void newsortasc(int[]array,int[]dest_arr){
          for (int i = 0; i < array.length; i++) {
             dest_arr[i] = array[i];
         }
@@ -42,6 +53,22 @@ public class ArrayManipulation1_3 {
         for (int i = 0; i < dest_arr.length; i++) {
             for (int j = i + 1; j < dest_arr.length; j++) {
                 if (dest_arr[j] < dest_arr[i]) {
+                    temp = dest_arr[i];
+                    dest_arr[i] = dest_arr[j];
+                    dest_arr[j] = temp;
+                }
+            }
+        }
+    }
+
+    public static void newsortdesc(int[]array,int[]dest_arr){
+         for (int i = 0; i < array.length; i++) {
+            dest_arr[i] = array[i];
+        }
+        int temp=0;
+        for (int i = 0; i < dest_arr.length; i++) {
+            for (int j = i + 1; j < dest_arr.length; j++) {
+                if (dest_arr[j] > dest_arr[i]) {
                     temp = dest_arr[i];
                     dest_arr[i] = dest_arr[j];
                     dest_arr[j] = temp;

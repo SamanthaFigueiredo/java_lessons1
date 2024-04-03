@@ -51,4 +51,28 @@ public class ArrayManipulation1_4 {
     }
 
 
+
 }
+
+
+//Alternative
+
+// int[] newArray = getNonDeletedValues(array);
+
+ //public static int[] getNonDeletedValues(int[] array) {
+   //     int count = 0;
+     //   for (int value : array) {
+       //     if (value != -1) {
+         //       count++;
+           // }
+        //}
+        //int[] newArray = new int[count];
+        //int newIndex = 0;
+        //for (int value : array) {
+          //  if (value != -1) {
+            //    newArray[newIndex++] = value;
+            //}
+        //}
+        //return newArray;
+    //}
+

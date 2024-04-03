@@ -46,3 +46,8 @@ public class ArrayManipulation1_1 {
         System.out.print("]\n");
     }
 }
+
+//Alternative
+//for(int i=0;i<array.length;i++){
+        //    array[i]=i;
+        //}

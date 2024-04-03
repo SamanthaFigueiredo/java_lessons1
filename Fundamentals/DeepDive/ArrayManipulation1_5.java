@@ -1,19 +1,22 @@
 public class ArrayManipulation1_5 {
     public static void main(String[]args){
 
+        //initial array
         int[] array = {3,4,2,6,4,7,9,1};
        
+        //called method to print initial array
         printArray("array before adding ",array);
 
-        int num=8;
-        array = add(array,num);
+        //method called and assigned that adds array
+        array = add(array,22);
         
+        //called method that prints new array
         printArray("array after adding",array);
 
 
     }
 
-    //TODO: This method throws an exception please fix it.
+    //Method that adds value to end of array 
     public static int [] add(int[] arrayToAddTo, int itemToAdd){
 
         int initialSize = arrayToAddTo.length;
@@ -21,22 +24,21 @@ public class ArrayManipulation1_5 {
 
         //Create an array that is equal to newSize
         int[]newArray=new int[newSize];
-        //copy elements over
 
+        //copy elements over
         for (int i = 0; i < initialSize; i++) {
             newArray[i] = arrayToAddTo[i];
         }
-        //add the element at the end of the array
 
-        //Note this line is buggy as it uses the old array
-        //Your code should use the new array
+        //add the element at the end of the array
         newArray[newSize-1]=itemToAdd;
 
         //This should return the new array
         return newArray;
     
     }
-    
+        
+    //pretty print the specified array
     public static void printArray(String prefix,int[] arrayToPrint){
         System.out.print(prefix);
         System.out.print("[");
