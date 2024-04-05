@@ -30,8 +30,6 @@ public class ArrayManipulation1_7 {
             }
         }
 
-
-
         //new array size , old array - amount of zeros
         int newSize = initialSize - newSizeLess;
 
