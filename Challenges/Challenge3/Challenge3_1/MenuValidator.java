@@ -9,7 +9,7 @@ public class MenuValidator {
             return false;
         }
         //false if not in number range (regex)
-        if (!menu.matches("[1-5]")) {
+        if (!menu.matches("[1-6]")) {
             System.out.println("Invalid menu option. Please choose a number between 1 and 5.");
             return false;
         }

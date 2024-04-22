@@ -8,13 +8,14 @@ public class MenuPrinter{
 							+"2. Delete a user \n"
 							+"3. Update a user \n"
 							+"4. List Users \n"
-							+"5. Exit :(");
+							+"5. Get User \n"
+							+"6.Exit :(");
 		System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
 
 		//String menu=Prompter.prompt("\nChoose an option number (1-5) for operation -> ");
 
-		String menu=Prompter.prompt("\nChoose an option number (1-5) for operation -> ");
+		String menu=Prompter.prompt("\nChoose an option number (1-6) for operation -> ");
 		boolean validMenu = MenuValidator.menuvalid(menu);
 		
             if (validMenu) {

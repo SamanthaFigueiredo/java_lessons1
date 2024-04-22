@@ -8,23 +8,31 @@ public class Challenge3Main{
 			 
 			boolean validdob=false;
 			String dob=null;
+			String name=null;
+			String surname=null;
+			String email=null;
+			String id=null;
+			double age=0;
 			int i = MenuPrinter.print();
 			switch(i){
 			case 1:
 
-				String name=Prompter.prompt("\nEnter your name -> ");
-				String surname=Prompter.prompt("\nEnter your surname -> ");
+				name=Prompter.prompt("\nEnter your name -> ");
+				surname=Prompter.prompt("\nEnter your surname -> ");
 
-				String email=Prompter.prompt("\nEnter your email -> ");
+				email=Prompter.prompt("\nEnter your email -> ");
 				while(!validdob){
 
-				 dob=Prompter.prompt("\nEnter your date of birth (dd/mm/yyyy) -> ");
-				 validdob=DateValidator.isValid(dob);
-				}
+					dob=Prompter.prompt("\nEnter your date of birth (dd/mm/yyyy) -> ");
+				 	validdob=DateValidator.isValid(dob);
+				 	
+				 	age=AgeCalculator.calculate(dob);
 				
-				String id=Prompter.prompt("\nEnter your Id number -> ");
+				}
+
+				id=Prompter.prompt("\nEnter your Id number -> ");
 			
-				UserDAO.create(name,surname,email,dob,id,String.valueOf(AgeCalculator.calculate(dob)));
+				UserDAO.create(name,surname,email,dob,id,String.valueOf(age));
 				break;
 
 			case 2:
@@ -33,12 +41,18 @@ public class Challenge3Main{
 				break;
 			case 3:
 				String updatemail=Prompter.prompt("\nEnter email -> ");
+				UserDAO.update(name,surname,updatemail,dob,id,String.valueOf(age));
 
 			case 4:
 				UserDAO.findAll();
 				break;
 			case 5:
-			System.exit(0);
+				String getuser=Prompter.prompt("\nEnter email to get user -> ");
+				UserDAO.getUserByEmail(getuser);
+				break;
+			case 6:
+				System.exit(0);
+				break;
 			}
 
 			
