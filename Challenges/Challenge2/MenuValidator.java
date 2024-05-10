@@ -29,7 +29,7 @@ public class MenuValidator {
                 if(!operator.equals("+")){
 
                     System.out.println("---Invalid Operator for chosen Operation---");
-                    return false;
+                    return false;//if the sign entered is invalid, they will re-prompt the sign
 
                     }
                 else{
@@ -46,8 +46,7 @@ public class MenuValidator {
                 if(!operator.equals("-")){
 
                     System.out.println("---Invalid Operator for chosen Operation---");
-                    return false;
-
+                    return false;//if the sign entered is invalid, they will re-prompt the sign
                     }
                 else{
 
@@ -63,7 +62,7 @@ public class MenuValidator {
                 if(!operator.equals("*")){
 
                     System.out.println("---Invalid Operator for chosen Operation---");
-                    return false;
+                    return false;//if the sign entered is invalid, they will re-prompt the sign
 
                     }
                 else{
@@ -80,7 +79,7 @@ public class MenuValidator {
                 if(!operator.equals("/")){
 
                     System.out.println("---Invalid Operator for chosen Operation---");
-                    return false;
+                    return false;//if the sign entered is invalid, they will re-prompt the sign
 
                     }
                 else{
@@ -97,7 +96,7 @@ public class MenuValidator {
                 if(!operator.equals("%")){
 
                     System.out.println("---Invalid Operator for chosen Operation---");
-                    return false;
+                    return false;//if the sign entered is invalid, they will re-prompt the sign
 
                     }
                 else{

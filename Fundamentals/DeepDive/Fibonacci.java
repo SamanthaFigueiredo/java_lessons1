@@ -33,6 +33,8 @@ public class Fibonacci{
 		//iterates through loop and assigns values to indexes
 		for(int i=2;i<fibarr.length;i++){
 
+			
+
 			//adds values at i-1 and i-2 in the array
 			fibarr[i]=fibarr[i-1]+fibarr[i-2];
 			
@@ -42,3 +44,20 @@ public class Fibonacci{
 
 
 //Alternative
+
+// public static void main(String args[]) {
+//     int n, i;
+//     Scanner sc = new Scanner(System.in);
+
+//     n = sc.nextInt();
+//     sc.close();
+
+//     int values[] = new int[n]; // space O(N) used
+//     values[0] = 0;
+//     values[1] = 1;
+
+//     for (i = 2; i < n; i++) {
+//       values[i] = values[i - 1] + values[i - 2];
+//     }
+//     System.out.println("The nth fibonacci number is " + values[n - 1]);
+//   }

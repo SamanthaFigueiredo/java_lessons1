@@ -1,5 +1,6 @@
 public class FizzBuzz{
 	public static void main(String[]args){
+		
 		int[] array=new int[101];
 
 		//method called to populate it from 1-100

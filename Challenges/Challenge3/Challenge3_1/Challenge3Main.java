@@ -1,8 +1,7 @@
 public class Challenge3Main{
 
 	public static void main(String[]args){
-
-
+		UserDAOfile.readFromFile();
 		while(true){
 
 			boolean validemail = false;
@@ -21,18 +20,17 @@ public class Challenge3Main{
 
 			switch(i){
 			case 1:
+				UserDAOfile.readFromFile();
 				while(!validinput){
 					name=Prompter.prompt("\nEnter your name -> ");
 					surname=Prompter.prompt("\nEnter your surname -> ");
 					validinput=FormatChecker.namescheck(name,surname);
+
 				}
 				
 				while(!validemail0){
 					email=Prompter.prompt("\nEnter your email -> ");
-					validemail0=(FormatChecker.emailcheck(email)&UserDAO.checkemaildup(email));
-
-				
-					
+					validemail0=(FormatChecker.emailcheck(email)&UserDAOfile.checkemaildup(email));
 
 				}
 				
@@ -55,14 +53,15 @@ public class Challenge3Main{
 				
 
 				
-            	UserDAO.create(name,surname,email,dob,id,String.valueOf(age));				
+            	UserDAOfile.create(name,surname,email,dob,id,String.valueOf(age));
+
 				break;
 
 			case 2:
 				while(!validemail){
 					String deletemail=Prompter.prompt("\nEnter email you want to delete -> ");
-					validemail=UserDAO.checkemail(deletemail);
-					UserDAO.delete(deletemail);
+					validemail=UserDAOfile.checkemail(deletemail);
+					UserDAOfile.delete(deletemail);
 				}
 				
 				break;
@@ -70,21 +69,21 @@ public class Challenge3Main{
 			case 3:
 					String updatemail=Prompter.prompt("\nEnter user's email you want to update -> ");
 					
-					UserDAO.update(name,surname,updatemail,dob,id,String.valueOf(age));
+					UserDAOfile.update(name,surname,updatemail,dob,id,String.valueOf(age));
 				
-				
+					
 				break;
 
 			case 4:
 
-				UserDAO.findAll();
+				UserDAOfile.findAll();
 				break;
 
 			case 5:
 				while(!validemail){
 					String getuser=Prompter.prompt("\nEnter user's email you want to retrieve -> ");
-					validemail=UserDAO.checkemail(getuser);
-					UserDAO.getUserByEmail(getuser);
+					validemail=UserDAOfile.checkemail(getuser);
+					UserDAOfile.getUserByEmail(getuser);
 				}
 				
 				break;

@@ -1,14 +1,18 @@
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
-public class UserDAO{
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class UserDAOfile{
 
 	public static int rowCount=0;
 	public static String [][] info=new String[rowCount][6];
 
 	public static void create(String name, String surname, String email, String dob, String id,String age){
 		// Increment rowCount first
-        rowCount++;
+        rowCount = info.length + 1;
         // Resize the info array to accommodate the new row
         String[][] temp = new String[rowCount][6];
         for (int i = 0; i < info.length; i++) {
@@ -25,7 +29,12 @@ public class UserDAO{
 
      System.out.print("\nHello "+name+ " " + surname+" you details have been saved to the database.");
      
-    
+     try {
+            insertdoc(info);
+        } catch (FileNotFoundException e) {
+            // Handle the exception (e.g., print an error message)
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
     
 	}
     
@@ -125,6 +134,12 @@ public class UserDAO{
                         System.out.print("Value entered is out of range");
                         break;
                 }
+                  try {
+            insertdoc(info);
+        } catch (FileNotFoundException e) {
+            // Handle the exception (e.g., print an error message)
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
         }
     
 	   }
@@ -150,6 +165,12 @@ public static void delete(String email) {
             info = temp;
             rowCount--;
             System.out.println(email + " has been deleted");
+             try {
+            insertdoc(info);
+        } catch (FileNotFoundException e) {
+            // Handle the exception (e.g., print an error message)
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
             break; // Exit the loop once deletion is done
         }
     }
@@ -159,26 +180,23 @@ public static void delete(String email) {
 }
 
 
-
-	public static String[] findAll(){
-         String [] arr=new String[info.length];
-        if(info.length==0){
-            System.out.print("No Users found!!! Add Users :)");
+  public static void findAll() {
+        //readFromFile();
+        if (info.length > 0) {
+            for (int i = 0; i < info.length; i++) {
+                System.out.println("User " + (i + 1) + ":");
+                System.out.println("\tName: " + info[i][0]);
+                System.out.println("\tSurname: " + info[i][1]);
+                System.out.println("\tEmail: " + info[i][2]);
+                System.out.println("\tDate of Birth: " + info[i][3]);
+                System.out.println("\tID: " + info[i][4]);
+                System.out.println("\tAge: " + info[i][5]);
+                System.out.println();
+            }
+        } else {
+            System.out.println("No data found in the file.");
         }
-		for (int i = 0; i < info.length; i++) {
-       
-           
-           String output="\nName: "+info[i][0]+"\nSurname: "+info[i][1]+"\nEmail: "+info[i][2]+"\nDate of birth: "
-                        +info[i][3]+"\nid: "+info[i][4]+"\nAge: "+info[i][5]+"\n";
-            arr[i]=output;
-                
-
-        }
-        for(int i=0;i<arr.length;i++){
-            System.out.println(arr[i]);
-        }
-		return arr;
-	}
+    }
 
 
     public static String[] getUserByEmail(String email){
@@ -189,6 +207,7 @@ public static void delete(String email) {
             if(info[i][2].equals(email)){
 
                 userFound = true;
+                
                 arr[0]=info[i][0];
                 arr[1]=info[i][1];
                 arr[2]=info[i][2];
@@ -200,7 +219,7 @@ public static void delete(String email) {
                 System.out.print("\nName: "+arr[0]);
                 System.out.print("\nSurname: "+arr[1]);
                 System.out.print("\nEmail: "+arr[2]);
-                System.out.print("\nDate of birht: "+arr[3]);
+                System.out.print("\nDate of birth: "+arr[3]);
                 System.out.print("\nid: "+arr[4]);
                 System.out.print("\nAge: "+arr[5]);
 
@@ -236,69 +255,54 @@ public static void delete(String email) {
     }
 
 
-  
+  public static void insertdoc(String[][]info) throws FileNotFoundException {
+    PrintWriter output = new PrintWriter("Challenge3.txt");
+    for (int i = 0; i < info.length; i++) {
+        output.print("[");
+        for (int j = 0; j < info[i].length; j++) {
+            output.print(info[i][j]);
+            if (j < info[i].length - 1) {
+                output.print(", ");
+            }
+        }
+        output.println("]");
+    }
+    output.close();
+}
+
+ public static void readFromFile() {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Challenge3.txt"))) {
+            long count = reader.lines().count();
+            info = new String[(int) count][6];
+            
+            BufferedReader resetReader = new BufferedReader(new FileReader("Challenge3.txt"));
+            String line;
+            int index = 0;
+            while ((line = resetReader.readLine()) != null) {
+                String[] parts = line.substring(1, line.length() - 1).split(", ");
+                if (parts.length == 6) {
+                    for (int i = 0; i < 6; i++) {
+                        info[index][i] = parts[i];
+                    }
+                    index++;
+                }
+            }
+            System.out.println("File data read successfully.");
+        } catch (IOException e) {
+            System.out.println("Error reading from file: " + e.getMessage());
+        }
+    }
+
+
+   
 
 
 }
 
 
 
-// public static String[] findAll(){
-         
-//         if(info.length==0){
-//             System.out.print("No Users found");
-//         }
-//         for (int i = 0; i < info.length; i++) {
-            
-//             // arr[0]=info[i][0];
-//             // arr[1]=info[i][1];
-//             // arr[2]=info[i][2];
-//             // arr[3]=info[i][3];
-//             // arr[4]=info[i][4];
-//             // arr[5]=info[i][5];
-           
-//                 // System.out.print("Name: "+arr[0]);
-//                 // System.out.print("\nSurname: "+arr[1]);
-//                 // System.out.print("\nEmail: "+arr[2]);
-//                 // System.out.print("\nDate of birth: "+arr[3]);
-//                 // System.out.print("\nid: "+arr[4]);
-//                 // System.out.print("\nAge: "+arr[5]);
-
-//         }
-        
-//         return info;
-//     }
 
 
-/*public static void delete(String email) {
-    int indexToRemove = -1;//unreachable value
-    //assigns that new index to indexToRemove.
-    for (int i = 0; i < info.length; i++) {
-        if (info[i][2] != null && info[i][2].equals(email)) { // Check for non-null email
-            indexToRemove = i;
-            break;
-        }
-    }
-    //If "indexToRemove" is different to original value
-    if (indexToRemove != -1) {
-        //temp array storing oldsize - removed elements
-        String[][] temp = new String[info.length - 1][6];
-        int newIndex = 0;
-        //populates new array
-        for (int i = 0; i < info.length; i++) {
-            if (i != indexToRemove) {
-                temp[newIndex++] = info[i];
-            }
-        }
-        //assigns info array to temp
-        info = temp;
-        rowCount--; // Decrement rowCount since a user is deleted
-        System.out.println(email+" has been deleted");
-    } else {
-        //email entered is not found
-        System.out.println("User not found");
-    }
-}*/
 
 
 
