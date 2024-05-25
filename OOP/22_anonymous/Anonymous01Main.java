@@ -9,7 +9,6 @@ public class Anonymous01Main {
 			}
 		};
 		
-		
 		superX.doSomething();
 	}
 }
