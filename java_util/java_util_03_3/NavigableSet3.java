@@ -1,0 +1,15 @@
+import java.util.*;
+public class NavigableSet3{
+	public static void main(String[]args){
+		NavigableSet<Long> list=new TreeSet<Long>();
+		list.add(5L);
+		list.add(10L);
+		list.add(20L);
+		list.add(25L);
+
+		System.out.print("Last value: "+list.last());
+
+		System.out.print("Pervious value: "+list.lower(list.last()));
+
+	}
+}
